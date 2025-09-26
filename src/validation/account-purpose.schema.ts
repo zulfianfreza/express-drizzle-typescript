@@ -1,6 +1,7 @@
 import Joi from 'joi';
 
 export const createOrUpdateAccountPurposeSchema = Joi.object({
-  title: Joi.string().required(),
-  description: Joi.string(),
+  code: Joi.string().required(),
+  name: Joi.string().required(),
+  is_active: Joi.boolean().default(false),
 });
