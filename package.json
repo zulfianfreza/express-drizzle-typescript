@@ -14,10 +14,10 @@
     "db:reset": "tsx command/reset.ts",
     "db:fresh": "npm run db:reset && npm run db:migrate && npm run db:seed",
     "prepare": "husky",
-    "lint": "eslint",
-    "lint:fix": "eslint --fix",
-    "lint:migrate": "npx @eslint/migrate-config .eslintrc.json",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "biome lint .",
+    "lint:fix": "biome lint --write --unsafe .",
+    "format": "biome format --write .",
+    "check": "biome check --write --unsafe ."
   },
   "keywords": [],
   "author": "",
@@ -49,8 +49,7 @@
   },
   "lint-staged": {
     "*.{ts,js}": [
-      "npm run lint:fix",
-      "npm run test -- --bail --findRelatedTests"
+      "biome check --write --unsafe"
     ]
   }
 }
