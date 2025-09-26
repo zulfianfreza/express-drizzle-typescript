@@ -24,8 +24,6 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@commitlint/cli": "^20.0.0",
-    "@commitlint/config-conventional": "^20.0.0",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
     "cors": "^2.8.5",
@@ -36,7 +34,6 @@
     "http-status": "^2.1.0",
     "i": "^0.3.7",
     "joi": "^18.0.1",
-    "lint-staged": "^16.2.1",
     "mysql2": "^3.14.5",
     "npm": "^11.6.1",
     "tsconfig-paths": "^4.2.0",
@@ -44,6 +41,10 @@
     "zod": "^4.1.11"
   },
   "devDependencies": {
+    "@commitlint/cli": "^20.0.0",
+    "@commitlint/config-conventional": "^20.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.1",
     "ts-node": "^10.9.2"
   },
   "lint-staged": {
